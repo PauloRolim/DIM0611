@@ -8,7 +8,7 @@ extern std::ifstream fin;
 // construtor 
 Lexer::Lexer()
 {
-	// insere palavras-reservadas na tabela
+	// insere palavras-reservadas na tabela de id's
 	token_table["main"]  = Token{ Tag::MAIN, "main" };
 	token_table["int"]   = Token{ Tag::TYPE, "int" };
 	token_table["float"] = Token{ Tag::TYPE, "float" };
@@ -19,7 +19,7 @@ Lexer::Lexer()
 	token_table["while"] = Token{ Tag::WHILE, "while" };
 	token_table["do"]    = Token{ Tag::DO,    "do" };
 	
-	// inicia leitura da entrada
+	// inicia leitura da entrada a partir de um arquivo
 	peek = fin.get();
 }
 

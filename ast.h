@@ -4,6 +4,8 @@
 
 #include "lexer.h"
 
+//arvore de sintaxe
+
 enum NodeType
 {
     UNKNOWN,
@@ -53,7 +55,7 @@ struct Statement : public Node
 struct Expression : public Node
 {
     int type;
-    Token * token;
+    Token * token; //guardar o nome do no
         
     Expression(Token *t);
     Expression(int ntype, int etype, Token *t);
@@ -141,6 +143,7 @@ struct If : public Statement
 
 struct While : public Statement
 {
+    unsigned after;
     Expression *expr;
     Statement *stmt;
     While(Expression *e, Statement *s);

@@ -10,6 +10,9 @@ using std::stringstream;
 
 extern Lexer * scanner;
 
+/*O analisador sintático preditivo é baseado num esquema
+de tradução dirigida por sintaxe*/
+
 Statement * Parser::Program()
 {
     // program -> int main() block

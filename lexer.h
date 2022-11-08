@@ -32,6 +32,7 @@ private:
 	int line = 1;		// número da linha atual
 
 	// tabela para identificadores e palavras-chave
+	// nao se trata de uma tabela de simbolos
 	unordered_map<string, Token> token_table;
 
 public:
